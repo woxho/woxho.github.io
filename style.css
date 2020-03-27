@@ -1,0 +1,434 @@
+body{
+    max-width: 1335px;
+    font-family: Poppins,sans-serif;
+    font-weight: 400;
+    color: #000;
+    background: #f1f1f1;
+    letter-spacing: .3px;
+}
+/* #header1{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index:100;
+  } */
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index:100;
+}
+.sticky + .content {
+    padding-top: 720px;  
+}
+
+.border-bottom{
+    border-bottom: 1px solid rgb(196, 195, 195);
+}
+.choose-city{
+    display: inline-block;
+    padding:0 5px 0 5px;
+}
+.search {
+    display: flex;
+    border: 1px solid #e2e2e2;
+    border-radius: 3px;
+    background: #fff;
+}
+.select-box {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    height: 48px;
+    width: 100px;
+    background-color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .5px;
+}
+.enter-location{
+    width: 400px;
+    display: inline-block;
+    position: relative;
+}
+.icon-search{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #cfcece;
+}
+.searchbar{
+    padding-left: 40px;
+    height: 48px;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 1px solid #e2e2e2;
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .5px;
+    /* padding: 5px 15px; */
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    /* height:40px;
+    width:400px;
+    padding-left: 20px; */
+}
+.user-option li{
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+.dark{
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size:1.5rem;
+}
+.section1{
+    background: url("https://cdn.pixabay.com/photo/2016/10/13/09/06/travel-1737168__340.jpg") bottom center/cover no-repeat;
+    height: 100vh;
+    /* margin-top: -80px; */
+    /* display: flex; */
+    align-items: center;
+    min-height: 600px;
+}
+.launge{
+    background: url("https://cdn.pixabay.com/photo/2017/04/05/15/58/hotelroom-2205447__340.jpg") bottom center/cover no-repeat;
+    height: 100vh;
+    /* margin-top: -80px; */
+    /* display: flex; */
+    align-items: center;
+    min-height: 600px;
+}
+.launge h1{
+    text-align: center;
+    color: #fff;
+    font-size: 41px;
+    line-height: 45px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    max-width: 870px;
+    margin: 0 auto;
+}
+.hub-box{
+    flex: 0 0 350px;
+    max-width: 350px;
+}
+.introduction{
+    color: #5c5c5c;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 10px;
+    background: #f5c106;
+    display: inline-block;
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+.hub-img{
+    padding-left: 15px;
+    display: flex;
+    max-width: 700px;
+}
+.hub-img-left{
+    position: relative;
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 15px;
+}
+.hub-img-1 , .hub-img-2 ,.hub-img-3, .hub-img-4 {
+    /* box-shadow: 0 0 10px 3px rgba(0,0,0,.2); */
+    /* border: 1px solid #fff; */
+    cursor: pointer;
+}
+.hub-img-1{
+    padding-right: 25px;
+    z-index: 1;
+}
+.hub-img-2{
+    margin-top: -100px;
+    float: right;
+    padding-left: 30px;
+    
+}
+.hub-img-right{
+    position: relative;
+    max-width: 50%;
+    flex: 0 0 50%;
+    padding: 0 15px;
+}
+.hub-img-3{
+    padding-right: 25px;
+}
+.hub-img-4{
+    padding-left: 30px;
+    margin-top: -70px;
+}
+.hub-img-block {
+    position: relative;
+}
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.animated {
+    visibility: visible;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.hidden-initial {
+    visibility: hidden;
+}
+#carousel {
+    background: url("https://cdn.pixabay.com/photo/2015/05/15/14/40/building-768623__340.jpg") left top  no-repeat ,url("https://cdn.pixabay.com/photo/2017/08/06/14/56/people-2593251__340.jpg") right bottom no-repeat;
+}
+ #carousel .carousel-item {
+   height: 100vh;
+   width: 100%;
+   min-height: 350px;
+   background: no-repeat center center scroll;
+   background-size: cover;
+   opacity: .5;
+
+ }
+ 
+ #carousel .carousel-inner .carousel-item {
+   transition: -webkit-transform 2s ease;
+   transition: transform 2s ease;
+   transition: transform 2s ease, -webkit-transform 2s ease;
+ }
+ 
+ #carousel .carousel-item .caption {
+   background-color: rgb(255, 255, 255);
+   padding: 40px;
+   color: rgb(146, 146, 146);
+   animation-duration: 1s;
+   animation-delay: 2s;
+ }
+ 
+ #carousel .caption h2 {
+   animation-duration: 1s;
+   animation-delay: 2s;
+ }
+ #carousel .caption h1 {
+   animation-duration: 1s;
+   animation-delay: 2s;
+ }
+ 
+ #carousel .caption p {
+   animation-duration: 1s;
+   animation-delay: 2.2s;
+ }
+
+/* .happiness-section .background-wrapper{
+    background: url("https://cdn.pixabay.com/photo/2015/05/15/14/40/building-768623__340.jpg") left top  no-repeat ,url("https://cdn.pixabay.com/photo/2017/08/06/14/56/people-2593251__340.jpg") right bottom no-repeat;
+    height: 600px;
+    position: relative;
+    opacity: 0.9;
+    border: none;
+}
+.happiness-box {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    width: 440px;
+    height: 200px;
+}
+.happiness-box .carousel-indicators {
+    padding-left: 30px;
+    margin: 0;
+    display: block;
+}
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+.happiness-box .count {
+    font-size: 90px;
+    color: #efefef;
+    line-height: 75px;
+    position: absolute;
+    font-weight: 700;
+    left: -30px;
+    top: -40px;
+}
+.fadeInCount span {
+    -webkit-animation: 9s ease-in-out fadeInCountEffect;
+    animation: 9s ease-in-out fadeInCountEffect;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+ .happiness-box h5 span {
+    display: block; 
+    color: #0058c8;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+}
+.fadeEffect {
+    -webkit-animation: 1.5s ease-in-out fadeEffect;
+    animation: 1.5s ease-in-out fadeEffect;
+}
+.animated {
+    visibility: visible;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+.happiness-box p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #2f2f2f;
+    letter-spacing: .4px;
+} */
+.top-property-img {
+    height: 320px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 6px 6px 0 0;
+    /* border-color: white; */
+}
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 0 5px;
+}
+.address {
+    font-size: 12px;
+    color: #777;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin: 0 0 20px;
+}
+.pli-amenities{
+    font-size: 12.5px;
+    line-height: 13px;
+    text-align: center;
+    position: relative;
+    border-right: 1px solid #e5e5e5;
+    padding: 0 15px;
+    text-transform: capitalize;
+    display: table-cell;
+}
+.btn{
+    width: 120px;
+    height: 35px;
+    /* border-top-left-radius: 12px;
+    border-start-start-radius: 12px; */
+    border-radius: 10px 0;
+    background: 0 0/150% auto;
+    background-image: linear-gradient(to right,#084dd6 0,#0072ff 100%);
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-color: #0072ff;
+    color: #fff;
+    padding: 16px 15px;
+    letter-spacing: .75px;
+    transition: .5s;
+}
+.btn-primary {
+    padding: 14px 20px;
+}
+.hub-exp-box[_ngcontent-ziffy-app-c19] {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 70px;
+    padding-top: 70px;
+}
+.col-zx-1{
+    flex: 0 0 35%;
+    max-width: 35%;
+    padding-top: 100px;
+}
+.col-zx-2{
+    flex: 0 0 65%;
+    max-width: 65%;
+    padding-top: 100px;
+}
+.box {
+    padding: 0 15px;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+.text-capitalize {
+    text-transform: capitalize;
+    color: #000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+    text-decoration: none;
+    letter-spacing: .6px;
+}
+.appd{
+    /* position: absolute; */
+    right: 80px;
+    bottom: 80px;
+    width: 320px;
+    z-index: 1;
+}
+.app-download{
+background: #ffd231;
+padding: 80px 0 0;
+border-radius: 0 30px 60px 0;
+-webkit-clip-path: inset(0 80px 0 0 round 0 40px 70px 0);
+clip-path: inset(0 80px 0 0 round 0 40px 70px 0);
+position: relative;
+}
+/* /////  city  ///////// */
+.filters {
+    padding: 10px 0;
+    background: #fff;
+    text-align: right;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+.card-footer ul li{
+  content: "\2022";
+  color: green;
+  list-style-type: disc;
+  flex-direction: column;
+  font-size: 14px;
+}
+.feature-ul{
+    flex-direction:column;
+    
+}
